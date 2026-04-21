@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>李宇轩 | 个人主页</title>
+    <meta
+      name="description"
+      content="李宇轩 - 对外经济贸易大学国际经济与贸易 & 法语双学士，拥有字节跳动飞书 Meego、BCG、东吴证券研究所等实习经历的商业分析 / 咨询 / 研究方向个人主页。"
+    />
+    <!-- Google Fonts: Noto Sans SC & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Material Symbols for subtle icons -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&display=swap"
+    />
+    <!-- Tailwind CSS CDN -->
+    <script>
+      tailwind = undefined;
+      window.tailwind = window.tailwind || {};
+      window.tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Inter", "Noto Sans SC", "system-ui", "-apple-system", "BlinkMacSystemFont", "sans-serif"],
+            },
+            colors: {
+              primary: {
+                50: "#eff6ff",
+                100: "#dbeafe",
+                200: "#bfdbfe",
+                300: "#93c5fd",
+                400: "#60a5fa",
+                500: "#3b82f6",
+                600: "#2563eb",
+                700: "#1d4ed8",
+              },
+            },
+            boxShadow: {
+              soft: "0 18px 45px rgba(15, 23, 42, 0.06)",
+            },
+          },
+        },
+      };
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        font-family: "Inter", "Noto Sans SC", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      }
+      .gradient-bg {
+        background-image: radial-gradient(circle at top left, rgba(59, 130, 246, 0.16), transparent 55%),
+          radial-gradient(circle at bottom right, rgba(96, 165, 250, 0.13), transparent 55%);
+      }
+      .dark .gradient-bg {
+        background-image: radial-gradient(circle at top left, rgba(37, 99, 235, 0.2), transparent 55%),
+          radial-gradient(circle at bottom right, rgba(30, 64, 175, 0.35), transparent 55%);
+      }
+      .glass-nav {
+        backdrop-filter: blur(18px);
+      }
+      .fade-in-up {
+        opacity: 0;
+        transform: translateY(16px);
+        transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+      }
+      .fade-in-up.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .material-symbols-outlined {
+        font-variation-settings:
+          "FILL" 0,
+          "wght" 400,
+          "GRAD" 0,
+          "opsz" 24;
+      }
+      .toggle-pill {
+        transition: background-color 0.25s ease, color 0.25s ease;
+      }
+    </style>
+  </head>
+  <body class="gradient-bg bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 antialiased">
+    <!-- Navigation -->
+    <header
+      class="glass-nav fixed inset-x-0 top-0 z-30 border-b border-slate-200/80 bg-white/80 dark:border-slate-800/80 dark:bg-slate-950/80"
+    >
+      <nav class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6">
+        <div class="flex items-center gap-2">
+          <div class="h-7 w-7 rounded-xl bg-gradient-to-tr from-primary-500 to-sky-400 shadow-soft"></div>
+          <div class="text-sm font-medium tracking-tight text-slate-900 dark:text-slate-50">
+            <span data-i18n="brand-name">李宇轩 · Leo</span>
+          </div>
+        </div>
+        <div class="flex items-center gap-6 text-xs sm:text-sm">
+          <div class="hidden items-center gap-5 md:flex">
+            <a href="#home" class="nav-link text-slate-600 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white"
+              ><span data-i18n="nav-home">主页</span></a
+            >
+            <a href="#education" class="nav-link text-slate-600 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white"
+              ><span data-i18n="nav-edu">教育</span></a
+            >
+            <a href="#experience" class="nav-link text-slate-600 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white"
+              ><span data-i18n="nav-exp">经历</span></a
+            >
+            <a href="#honors" class="nav-link text-slate-600 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white"
+              ><span data-i18n="nav-honors">荣誉</span></a
+            >
+            <a href="#skills" class="nav-link text-slate-600 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white"
+              ><span data-i18n="nav-skills">技能</span></a
+            >
+            <a href="#contact" class="nav-link text-slate-600 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white"
+              ><span data-i18n="nav-contact">联系</span></a
+            >
+          </div>
+          <div class="flex items-center gap-2 rounded-full border border-slate-200 bg-slate-50/60 px-1 py-0.5 text-xs shadow-sm dark:border-slate-700 dark:bg-slate-900/80">
+            <button
+              type="button"
+              data-lang-toggle="zh"
+              class="toggle-pill rounded-full px-2 py-1 text-[11px] font-medium text-slate-900 dark:text-slate-100"
+            >
+              中文
+            </button>
+            <button
+              type="button"
+              data-lang-toggle="en"
+              class="toggle-pill rounded-full px-2 py-1 text-[11px] font-normal text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-100"
+            >
+              EN
+            </button>
+          </div>
+          <button
+            id="theme-toggle"
+            type="button"
+            class="ml-1 inline-flex h-8 w-8 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-700 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md dark:border-slate-700 dark:bg-slate-900 dark:text-amber-300"
+            aria-label="Toggle theme"
+          >
+            <span class="material-symbols-outlined text-[18px]" id="theme-icon">dark_mode</span>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main class="mx-auto max-w-5xl px-4 pt-24 pb-16 sm:px-6 sm:pt-28 lg:pt-32">
+      <!-- Hero -->
+      <section id="home" class="fade-in-up mb-14 sm:mb-20">
+        <div class="flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
+          <div class="max-w-xl space-y-5">
+            <p
+              class="inline-flex items-center gap-2 rounded-full bg-slate-900 text-[11px] font-medium text-slate-50 shadow-soft dark:bg-slate-100 dark:text-slate-900"
+            >
+              <span class="rounded-full bg-gradient-to-tr from-sky-400 to-primary-500 px-3 py-1" data-i18n="hero-badge"
+                >商业分析 · 咨询 · 研究</span
+              >
+              <span class="hidden pr-3 text-xs opacity-75 sm:inline" data-i18n="hero-badge-sub"
+                >国际经济与贸易 &amp; 法语双学士</span
+              >
+            </p>
+            <div>
+              <h1 class="text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl dark:text-slate-50">
+                <span data-i18n="hero-name-main">李宇轩</span>
+                <span class="ml-2 text-base font-normal text-slate-500 dark:text-slate-400" data-i18n="hero-name-en"
+                  >Yuxuan Leo</span
+                >
+              </h1>
+              <p class="mt-3 text-sm font-medium uppercase tracking-[0.18em] text-slate-500 dark:text-slate-400">
+                <span data-i18n="hero-tagline">To B 产品 &amp; 战略洞察 | 兼具工程严谨与人文视角</span>
+              </p>
+            </div>
+            <p class="text-sm leading-relaxed text-slate-600 sm:text-[15px] dark:text-slate-300" data-i18n="hero-intro">
+              就读于对外经济贸易大学国际经济与贸易 &amp; 法语双学士，拥有字节跳动飞书 Meego、波士顿咨询 BCG
+              及东吴证券研究所等多段实习经历，覆盖 SaaS、快消连锁与机械行业研究。善于从一线访谈与数据中提炼结构化洞察，连接商业逻辑与落地执行。
+            </p>
+            <div class="flex flex-wrap items-center gap-3">
+              <a
+                href="./resume.pdf"
+                class="inline-flex items-center gap-2 rounded-full bg-slate-900 px-4 py-2 text-xs font-medium text-slate-50 shadow-soft transition hover:-translate-y-0.5 hover:bg-slate-800 hover:shadow-md dark:bg-slate-100 dark:text-slate-900 dark:hover:bg-slate-200"
+                download
+              >
+                <span class="material-symbols-outlined text-[18px]">download</span>
+                <span data-i18n="btn-download">下载简历（PDF）</span>
+              </a>
+              <a
+                href="#contact"
+                class="inline-flex items-center gap-2 rounded-full border border-slate-300 bg-white/70 px-4 py-2 text-xs font-medium text-slate-700 shadow-sm transition hover:-translate-y-0.5 hover:border-slate-400 hover:shadow-md dark:border-slate-700 dark:bg-slate-900/80 dark:text-slate-100"
+              >
+                <span class="material-symbols-outlined text-[18px]">mail</span>
+                <span data-i18n="btn-contact">与我联系</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="fade-in-up max-w-xs self-start rounded-3xl bg-white/70 p-4 shadow-soft ring-1 ring-slate-200/70 dark:bg-slate-900/80 dark:ring-slate-700/70">
+            <h2 class="mb-2 text-xs font-semibold tracking-wide text-slate-500 dark:text-slate-400" data-i18n="card-contact-title">
+              联系方式
+            </h2>
+            <dl class="space-y-2 text-xs text-slate-700 dark:text-slate-200">
+              <div class="flex items-center justify-between gap-3">
+                <dt class="flex items-center gap-1.5 text-slate-500 dark:text-slate-400">
+                  <span class="material-symbols-outlined text-[16px]">call</span>
+                  <span data-i18n="card-phone">电话</span>
+                </dt>
+                <dd>
+                  <a href="tel:+8618503710316" class="hover:underline">+86 18503710316</a>
+                </dd>
+              </div>
+              <div class="flex items-center justify-between gap-3">
+                <dt class="flex items-center gap-1.5 text-slate-500 dark:text-slate-400">
+                  <span class="material-symbols-outlined text-[16px]">alternate_email</span>
+                  <span data-i18n="card-email">邮箱</span>
+                </dt>
+                <dd>
+                  <a href="mailto:liyuxuan_uibe@163.com" class="hover:underline">liyuxuan_uibe@163.com</a>
+                </dd>
+              </div>
+              <div class="flex items-center justify-between gap-3">
+                <dt class="flex items-center gap-1.5 text-slate-500 dark:text-slate-400">
+                  <span class="material-symbols-outlined text-[16px]">location_on</span>
+                  <span data-i18n="card-city">城市</span>
+                </dt>
+                <dd class="text-right" data-i18n="card-city-val">北京市朝阳区</dd>
+              </div>
+              <div class="flex items-center justify-between gap-3">
+                <dt class="flex items-center gap-1.5 text-slate-500 dark:text-slate-400">
+                  <span class="material-symbols-outlined text-[16px]">chat_bubble</span>
+                  <span data-i18n="card-wechat">微信</span>
+                </dt>
+                <dd class="text-right">LiYuXuan3208</dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </section>
+
+      <!-- Education & Honors -->
+      <section id="education" class="fade-in-up mb-14 sm:mb-20">
+        <div class="mb-6 flex items-center justify-between gap-4">
+          <div>
+            <h2 class="text-sm font-semibold tracking-[0.22em] text-slate-500 dark:text-slate-400" data-i18n="section-edu">
+              教育背景
+            </h2>
+            <p class="mt-1 text-sm text-slate-500 dark:text-slate-400" data-i18n="section-edu-sub">
+              国际化经济与法语复合背景，兼具商科训练与语言优势。
+            </p>
+          </div>
+        </div>
+        <div class="grid gap-5 md:grid-cols-[minmax(0,3fr)_minmax(0,2fr)]">
+          <div class="space-y-4 rounded-3xl bg-white/80 p-5 shadow-soft ring-1 ring-slate-200/80 dark:bg-slate-900/80 dark:ring-slate-800">
+            <div>
+              <div class="flex flex-wrap items-baseline justify-between gap-2">
+                <div>
+                  <h3 class="text-sm font-semibold text-slate-900 dark:text-slate-50" data-i18n="edu-uibe-title">
+                    对外经济贸易大学 · 国际经济与贸易 &amp; 法语双学士
+                  </h3>
+                  <p class="text-xs text-slate-500 dark:text-slate-400" data-i18n="edu-uibe-time">
+                    2023.09 – 2027.07，北京
+                  </p>
+                </div>
+                <p class="text-xs font-medium text-slate-600 dark:text-slate-300" data-i18n="edu-gpa">
+                  GPA 3.74 / 4.00 · 综合排名 1 / 13
+                </p>
+              </div>
+              - 语言 &amp; 专业证书：雅思 8.0，法语 B2（TEM-4 良好），ACCA 通过 7/13 科目。
+- 校级综合一等奖学金、校级优秀学生（Top 3%），体现综合成绩与校园贡献。
+            </div>
+            <div class="border-t border-dashed border-slate-200 pt-4 dark:border-slate-700">
+              <div class="flex flex-wrap items-baseline justify-between gap-2">
+                <div>
+                  <h3 class="text-sm font-semibold text-slate-900 dark:text-slate-50" data-i18n="edu-neoma-title">
+                    NEOMA 商学院（法国）· 商科交换
+                  </h3>
+                  <p class="text-xs text-slate-500 dark:text-slate-400" data-i18n="edu-neoma-time">
+                    2025.09 – 2025.12，法国
+                  </p>
+                </div>
+                <p class="text-xs text-slate-500 dark:text-slate-400" data-i18n="edu-neoma-note">
+                  赴欧洲商学院深度体验本地商业环境与课堂训练。
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="space-y-4">
+            <div class="rounded-3xl bg-slate-900 text-slate-50 shadow-soft ring-1 ring-slate-900/80 dark:bg-slate-950">
+              <div class="border-b border-slate-700/60 px-5 py-3">
+                <p class="text-xs font-semibold tracking-[0.18em] text-slate-300" data-i18n="section-honors">
+                  核心荣誉
+                </p>
+              </div>
+              - <span class="mt-1 h-1.5 w-1.5 flex-none rounded-full bg-sky-300"></span>
+                  <span data-i18n="honor-1">校级综合一等奖学金（Top 3%），兼顾成绩、科研与活动贡献。</span>
+- <span class="mt-1 h-1.5 w-1.5 flex-none rounded-full bg-sky-300"></span>
+                  <span data-i18n="honor-2">校级优秀学生，体现在学习态度、组织能力与团队合作上的综合评定。</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Experience -->
+      <section id="experience" class="fade-in-up mb-14 sm:mb-20">
+        <div class="mb-6 flex items-center justify-between gap-4">
+          <div>
+            <h2 class="text-sm font-semibold tracking-[0.22em] text-slate-500 dark:text-slate-400" data-i18n="section-exp">
+              实习 &amp; 工作经历
+            </h2>
+            <p class="mt-1 text-sm text-slate-500 dark:text-slate-400" data-i18n="section-exp-sub">
+              覆盖字节跳动、战略咨询与卖方研究，多行业多视角理解业务本质。
+            </p>
+          </div>
+        </div>
+
+        <div class="space-y-5">
+          <!-- Lark Meego -->
+          <article
+            class="group rounded-3xl bg-white/85 p-5 shadow-soft ring-1 ring-slate-200/80 transition hover:-translate-y-1 hover:ring-primary-200/80 dark:bg-slate-900/85 dark:ring-slate-800"
+          >
+            <header class="flex flex-wrap items-baseline justify-between gap-3">
+              <div>
+                <h3 class="text-sm font-semibold text-slate-900 dark:text-slate-50" data-i18n="exp-lark-title">
+                  字节跳动 · 飞书 Meego — 商业分析实习生（国际化方向）
+                </h3>
+                <p class="text-xs text-slate-500 dark:text-slate-400" data-i18n="exp-lark-time">
+                  2026.01 – 2026.04，北京
+                </p>
+              </div>
+              <p class="text-xs text-slate-500 dark:text-slate-400" data-i18n="exp-lark-tag">
+                B2B SaaS · 项目管理 · 东南亚市场洞察
+              </p>
+            </header>
+            - 东南亚 SaaS 市场深度研究：访谈 10+ 东南亚市场行业专家，闭环处理 120+ 用户真实反馈，梳理支付意愿、产品复杂度等主要进入壁垒，识别零售与先进制造为最具潜力的切入行业。
+- 项目管理产品竞对跟踪：从功能、市场规模、定价与用户画像等维度，对比 Meego 与 Jira、Base 等竞品，提炼 Meego
+                在低定价、可视化能力及与飞书一体化上的核心优势，并输出后续开放平台与 AI 度量相关方向建议。
+- 项目管理 AI Agent 搭建：基于 OpenClaw CLI 部署具备定制化 Skills 的 Agent，参与“智能排期”“项目数据自动总结”“实例自动创建”等能力设计与测试，显著降低人工配置成本。
+          </article>
+
+          <!-- BCG -->
+          <article
+            class="group rounded-3xl bg-white/85 p-5 shadow-soft ring-1 ring-slate-200/80 transition hover:-translate-y-1 hover:ring-primary-200/80 dark:bg-slate-900/85 dark:ring-slate-800"
+          >
+            <header class="flex flex-wrap items-baseline justify-between gap-3">
+              <div>
+                <h3 class="text-sm font-semibold text-slate-900 dark:text-slate-50" data-i18n="exp-bcg-title">
+                  BCG 波士顿咨询 — 咨询实习生（PTA）
+                </h3>
+                <p class="text-xs text-slate-500 dark:text-slate-400" data-i18n="exp-bcg-time">
+                  2025.08 – 2025.12
+                </p>
+              </div>
+              <p class="text-xs text-slate-500 dark:text-slate-400" data-i18n="exp-bcg-tag">
+                快餐连锁 · 特许经营 · 市场扩张策略
+              </p>
+            </header>
+            - 某国际快餐品牌特许经营研究：对全球 Top 8 快餐企业主加盟协议进行拆解，横向对比特许费率、独占区域与契约年限等关键条款，为客户在中国的主加盟谈判提供量化边界与博弈空间参考。
+- 市场扩张策略：梳理 30+ 城市门店密度与布局，识别潜在空白区域，支撑品牌从核心城市向周边下沉的阶段性扩张规划。
+- 定价与产品创新建议：整理 50+ 早餐及鸡肉类 SKU 定价表并可视化价格区间，对比竞品差异，结合日韩市场经验提出套餐结构优化与本土口味创新方向。
+          </article>
+
+          <!-- Soochow Securities -->
+          <article
+            class="group rounded-3xl bg-white/85 p-5 shadow-soft ring-1 ring-slate-200/80 transition hover:-translate-y-1 hover:ring-primary-200/80 dark:bg-slate-900/85 dark:ring-slate-800"
+          >
+            <header class="flex flex-wrap items-baseline justify-between gap-3">
+              <div>
+                <h3 class="text-sm font-semibold text-slate-900 dark:text-slate-50" data-i18n="exp-sz-title">
+                  东吴证券 · 研究所机械组（新财富团队） — 研究助理
+                </h3>
+                <p class="text-xs text-slate-500 dark:text-slate-400" data-i18n="exp-sz-time">
+                  2024.10 – 2025.03
+                </p>
+              </div>
+              <p class="text-xs text-slate-500 dark:text-slate-400" data-i18n="exp-sz-tag">
+                机械行业 · 深度报告 · 行业出海
+              </p>
+            </header>
+            - 某工程机械龙头深度报告：拆解公司传统工程机械铸件、“两机业务”（燃气轮机与航空发动机叶片）及核电材料三大板块，结合“低空经济”与核电新建/替代周期，判断未来增长重心与弹性来源。
+- 工程机械行业研究：以徐工、三一、中联等龙头为样本，分析工程机械出海空间与竞争格局，判断海外矿业与北美本地化产能将成为增长关键驱动力。
+- 日常研究支持：参与 40+ 场调研并完成 15 万+ 字会议纪要，输出 80+ 公众号推文及数据库维护，夯实行业与公司跟踪基础。
+          </article>
+        </div>
+      </section>
+
+      <!-- Leadership & Activities -->
+      <section id="honors" class="fade-in-up mb-14 sm:mb-20">
+        <div class="mb-6 flex items-center justify-between gap-4">
+          <div>
+            <h2 class="text-sm font-semibold tracking-[0.22em] text-slate-500 dark:text-slate-400" data-i18n="section-lead">
+              学生工作 &amp; 领导力
+            </h2>
+            <p class="mt-1 text-sm text-slate-500 dark:text-slate-400" data-i18n="section-lead-sub">
+              在大型校园活动与班级管理中锤炼统筹协调与公开表达能力。
+            </p>
+          </div>
+        </div>
+        <div class="grid gap-5 md:grid-cols-2">
+          <article
+            class="rounded-3xl bg-white/85 p-5 shadow-soft ring-1 ring-slate-200/80 transition hover:-translate-y-1 hover:ring-primary-200/80 dark:bg-slate-900/85 dark:ring-slate-800"
+          >
+            <h3 class="text-sm font-semibold text-slate-900 dark:text-slate-50" data-i18n="lead-1-title">
+              外语学院团学联文化部 — 部长
+            </h3>
+            <p class="mt-1 text-xs text-slate-500 dark:text-slate-400" data-i18n="lead-1-time">
+              2023.09 – 2025.09
+            </p>
+            - 全流程策划 10+ 场讲座，覆盖嘉宾邀请、策划案撰写、物料与场地执行等环节，嘉宾包括外交官、学者及头部内容创作者。
+- 担任多场百人规模讲座主持人，实时控场并与嘉宾、同学互动，获得任课老师与学院老师的高度认可。
+          </article>
+
+          <article
+            class="rounded-3xl bg-white/85 p-5 shadow-soft ring-1 ring-slate-200/80 transition hover:-translate-y-1 hover:ring-primary-200/80 dark:bg-slate-900/85 dark:ring-slate-800"
+          >
+            <h3 class="text-sm font-semibold text-slate-900 dark:text-slate-50" data-i18n="lead-2-title">
+              法经 2301 班 — 班长
+            </h3>
+            <p class="mt-1 text-xs text-slate-500 dark:text-slate-400" data-i18n="lead-2-time">
+              2023.09 – 至今
+            </p>
+            - 统筹法语专业 70 周年系庆活动，担任当日主持人，对接 100+ 位不同届别校友，协调流程、后勤与活动后内容输出。
+- 负责日常班级管理与信息传达，组织月度班会及综测、奖学金相关工作，维持班级良好氛围与秩序。
+          </article>
+        </div>
+      </section>
+
+      <!-- Skills & Volunteering -->
+      <section id="skills" class="fade-in-up mb-14 sm:mb-20">
+        <div class="mb-6 flex items-center justify-between gap-4">
+          <div>
+            <h2 class="text-sm font-semibold tracking-[0.22em] text-slate-500 dark:text-slate-400" data-i18n="section-skills">
+              技能 &amp; 志愿服务
+            </h2>
+            <p class="mt-1 text-sm text-slate-500 dark:text-slate-400" data-i18n="section-skills-sub">
+              兼具数据工具、内容表达与长期公益参与的复合背景。
+            </p>
+          </div>
+        </div>
+        <div class="grid gap-5 md:grid-cols-[minmax(0,3fr)_minmax(0,2fr)]">
+          <div
+            class="rounded-3xl bg-white/85 p-5 shadow-soft ring-1 ring-slate-200/80 transition hover:-translate-y-1 hover:ring-primary-200/80 dark:bg-slate-900/85 dark:ring-slate-800"
+          >
+            <h3 class="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500 dark:text-slate-400" data-i18n="skills-pro">
+              专业技能
+            </h3>
+            <dl class="mt-3 space-y-2 text-xs text-slate-700 dark:text-slate-300">
+              <div class="flex gap-3">
+                <dt class="w-20 shrink-0 text-slate-500 dark:text-slate-400" data-i18n="skills-data-label">数据工具</dt>
+                <dd class="flex-1" data-i18n="skills-data">
+                  熟悉 Wind 数据库，能进行基础财务与行业数据提取与整理；掌握 Stata 进行回归与面板数据分析。
+                </dd>
+              </div>
+              <div class="flex gap-3">
+                <dt class="w-20 shrink-0 text-slate-500 dark:text-slate-400" data-i18n="skills-office-label">表达呈现</dt>
+                <dd class="flex-1" data-i18n="skills-office">
+                  熟练使用 PPT 与 Excel，能够结构化呈现研究结论并完成图表与模型搭建。
+                </dd>
+              </div>
+              <div class="flex gap-3">
+                <dt class="w-20 shrink-0 text-slate-500 dark:text-slate-400" data-i18n="skills-media-label">内容与视频</dt>
+                <dd class="flex-1" data-i18n="skills-media">
+                  熟悉剪映与微信公众号运营，参与撰写与发布 80+ 篇公众号文章，具备基本短视频与图文内容制作能力。
+                </dd>
+              </div>
+            </dl>
+          </div>
+
+          <div
+            class="rounded-3xl bg-slate-900 text-slate-50 shadow-soft ring-1 ring-slate-900/80 transition hover:-translate-y-1 hover:ring-sky-500/70 dark:bg-slate-950"
+          >
+            <div class="border-b border-slate-700/60 px-5 py-3">
+              <p class="text-xs font-semibold tracking-[0.18em] text-slate-300" data-i18n="skills-vol">
+                志愿服务
+              </p>
+            </div>
+            <div class="px-5 pb-4 pt-3 text-xs leading-relaxed text-slate-100">
+              <p data-i18n="skills-vol-desc">
+                累计 200+ 小时志愿服务，参与蒲公英中学支教及全球南方金融家论坛等项目，在实际一线场景中体会教育与金融议题背后的社会影响。
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact" class="fade-in-up">
+        <div
+          class="rounded-3xl bg-white/90 p-6 text-sm shadow-soft ring-1 ring-slate-200/80 dark:bg-slate-900/90 dark:ring-slate-800"
+        >
+          <div class="flex flex-wrap items-center justify-between gap-4">
+            <div>
+              <h2 class="text-sm font-semibold tracking-[0.2em] text-slate-500 dark:text-slate-400" data-i18n="section-contact">
+                联系我
+              </h2>
+              <p class="mt-1 text-xs text-slate-500 dark:text-slate-400" data-i18n="section-contact-sub">
+                如对 B2B 产品、咨询项目或研究机会感兴趣，欢迎通过邮箱或微信与我交流。
+              </p>
+            </div>
+            <div class="space-y-1 text-xs text-slate-700 dark:text-slate-200">
+              <div class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-[18px] text-sky-500">mail</span>
+                <a href="mailto:liyuxuan_uibe@163.com" class="hover:underline">liyuxuan_uibe@163.com</a>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-[18px] text-sky-500">chat_bubble</span>
+                <span>WeChat · LiYuXuan3208</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-slate-200/80 bg-white/80 py-4 text-xs text-slate-500 dark:border-slate-800 dark:bg-slate-950/90">
+      <div class="mx-auto flex max-w-5xl flex-wrap items-center justify-between gap-3 px-4 sm:px-6">
+        <p>
+          <span>&copy; <span id="year"></span></span>
+          <span class="mx-1">·</span>
+          <span data-i18n="footer-name">李宇轩</span>
+        </p>
+        <p class="flex items-center gap-2">
+          <span class="material-symbols-outlined text-[16px]">public</span>
+          <span data-i18n="footer-social">社交：微信 LiYuXuan3208 · 邮箱 liyuxuan_uibe@163.com</span>
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      (function () {
+        const htmlEl = document.documentElement;
+        const themeToggleBtn = document.getElementById("theme-toggle");
+        const themeIcon = document.getElementById("theme-icon");
+        const langToggleBtns = document.querySelectorAll("[data-lang-toggle]");
+        const yearEl = document.getElementById("year");
+        if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+        const translations = {
+          zh: {
+            "brand-name": "李宇轩 · Leo",
+            "nav-home": "主页",
+            "nav-edu": "教育",
+            "nav-exp": "经历",
+            "nav-honors": "荣誉",
+            "nav-skills": "技能",
+            "nav-contact": "联系",
+            "hero-badge": "商业分析 · 咨询 · 研究",
+            "hero-badge-sub": "国际经济与贸易 & 法语双学士",
+            "hero-name-main": "李宇轩",
+            "hero-name-en": "Yuxuan Leo",
+            "hero-tagline": "To B 产品 & 战略洞察 | 兼具工程严谨与人文视角",
+            "hero-intro":
+              "就读于对外经济贸易大学国际经济与贸易 & 法语双学士，拥有字节跳动飞书 Meego、波士顿咨询 BCG 及东吴证券研究所等多段实习经历，覆盖 SaaS、快消连锁与机械行业研究。善于从一线访谈与数据中提炼结构化洞察，连接商业逻辑与落地执行。",
+            "btn-download": "下载简历（PDF）",
+            "btn-contact": "与我联系",
+            "card-contact-title": "联系方式",
+            "card-phone": "电话",
+            "card-email": "邮箱",
+            "card-city": "城市",
+            "card-city-val": "北京市朝阳区",
+            "card-wechat": "微信",
+            "section-edu": "教育背景",
+            "section-edu-sub": "国际化经济与法语复合背景，兼具商科训练与语言优势。",
+            "edu-uibe-title": "对外经济贸易大学 · 国际经济与贸易 & 法语双学士",
+            "edu-uibe-time": "2023.09 – 2027.07，北京",
+            "edu-gpa": "GPA 3.74 / 4.00 · 综合排名 1 / 13",
+            "edu-lang-cert": "语言 & 专业证书：雅思 8.0，法语 B2（TEM-4 良好），ACCA 通过 7/13 科目。",
+            "edu-awards": "校级综合一等奖学金、校级优秀学生（Top 3%），体现综合成绩与校园贡献。",
+            "edu-neoma-title": "NEOMA 商学院（法国）· 商科交换",
+            "edu-neoma-time": "2025.09 – 2025.12，法国",
+            "edu-neoma-note": "赴欧洲商学院深度体验本地商业环境与课堂训练。",
+            "section-honors": "核心荣誉",
+            "honor-1": "校级综合一等奖学金（Top 3%），兼顾成绩、科研与活动贡献。",
+            "honor-2": "校级优秀学生，体现在学习态度、组织能力与团队合作上的综合评定。",
+            "section-exp": "实习 & 工作经历",
+            "section-exp-sub": "覆盖字节跳动、战略咨询与卖方研究，多行业多视角理解业务本质。",
+            "exp-lark-title": "字节跳动 · 飞书 Meego — 商业分析实习生（国际化方向）",
+            "exp-lark-time": "2026.01 – 2026.04，北京",
+            "exp-lark-tag": "B2B SaaS · 项目管理 · 东南亚市场洞察",
+            "exp-lark-1":
+              "东南亚 SaaS 市场深度研究：访谈 10+ 东南亚市场行业专家，闭环处理 120+ 用户真实反馈，梳理支付意愿、产品复杂度等主要进入壁垒，识别零售与先进制造为最具潜力的切入行业。",
+            "exp-lark-2":
+              "项目管理产品竞对跟踪：从功能、市场规模、定价与用户画像等维度，对比 Meego 与 Jira、Base 等竞品，提炼 Meego 在低定价、可视化能力及与飞书一体化上的核心优势，并输出后续开放平台与 AI 度量相关方向建议。",
+            "exp-lark-3":
+              "项目管理 AI Agent 搭建：基于 OpenClaw CLI 部署具备定制化 Skills 的 Agent，参与“智能排期”“项目数据自动总结”“实例自动创建”等能力设计与测试，显著降低人工配置成本。",
+            "exp-bcg-title": "BCG 波士顿咨询 — 咨询实习生（PTA）",
+            "exp-bcg-time": "2025.08 – 2025.12",
+            "exp-bcg-tag": "快餐连锁 · 特许经营 · 市场扩张策略",
+            "exp-bcg-1":
+              "某国际快餐品牌特许经营研究：对全球 Top 8 快餐企业主加盟协议进行拆解，横向对比特许费率、独占区域与契约年限等关键条款，为客户在中国的主加盟谈判提供量化边界与博弈空间参考。",
+            "exp-bcg-2":
+              "市场扩张策略：梳理 30+ 城市门店密度与布局，识别潜在空白区域，支撑品牌从核心城市向周边下沉的阶段性扩张规划。",
+            "exp-bcg-3":
+              "定价与产品创新建议：整理 50+ 早餐及鸡肉类 SKU 定价表并可视化价格区间，对比竞品差异，结合日韩市场经验提出套餐结构优化与本土口味创新方向。",
+            "exp-sz-title": "东吴证券 · 研究所机械组（新财富团队） — 研究助理",
+            "exp-sz-time": "2024.10 – 2025.03",
+            "exp-sz-tag": "机械行业 · 深度报告 · 行业出海",
+            "exp-sz-1":
+              "某工程机械龙头深度报告：拆解公司传统工程机械铸件、“两机业务”（燃气轮机与航空发动机叶片）及核电材料三大板块，结合“低空经济”与核电新建/替代周期，判断未来增长重心与弹性来源。",
+            "exp-sz-2":
+              "工程机械行业研究：以徐工、三一、中联等龙头为样本，分析工程机械出海空间与竞争格局，判断海外矿业与北美本地化产能将成为增长关键驱动力。",
+            "exp-sz-3":
+              "日常研究支持：参与 40+ 场调研并完成 15 万+ 字会议纪要，输出 80+ 公众号推文及数据库维护，夯实行业与公司跟踪基础。",
+            "section-lead": "学生工作 & 领导力",
+            "section-lead-sub": "在大型校园活动与班级管理中锤炼统筹协调与公开表达能力。",
+            "lead-1-title": "外语学院团学联文化部 — 部长",
+            "lead-1-time": "2023.09 – 2025.09",
+            "lead-1-1":
+              "全流程策划 10+ 场讲座，覆盖嘉宾邀请、策划案撰写、物料与场地执行等环节，嘉宾包括外交官、学者及头部内容创作者。",
+            "lead-1-2":
+              "担任多场百人规模讲座主持人，实时控场并与嘉宾、同学互动，获得任课老师与学院老师的高度认可。",
+            "lead-2-title": "法经 2301 班 — 班长",
+            "lead-2-time": "2023.09 – 至今",
+            "lead-2-1":
+              "统筹法语专业 70 周年系庆活动，担任当日主持人，对接 100+ 位不同届别校友，协调流程、后勤与活动后内容输出。",
+            "lead-2-2":
+              "负责日常班级管理与信息传达，组织月度班会及综测、奖学金相关工作，维持班级良好氛围与秩序。",
+            "section-skills": "技能 & 志愿服务",
+            "section-skills-sub": "兼具数据工具、内容表达与长期公益参与的复合背景。",
+            "skills-pro": "专业技能",
+            "skills-data-label": "数据工具",
+            "skills-data": "熟悉 Wind 数据库，能进行基础财务与行业数据提取与整理；掌握 Stata 进行回归与面板数据分析。",
+            "skills-office-label": "表达呈现",
+            "skills-office": "熟练使用 PPT 与 Excel，能够结构化呈现研究结论并完成图表与模型搭建。",
+            "skills-media-label": "内容与视频",
+            "skills-media": "熟悉剪映与微信公众号运营，参与撰写与发布 80+ 篇公众号文章，具备基本短视频与图文内容制作能力。",
+            "skills-vol": "志愿服务",
+            "skills-vol-desc":
+              "累计 200+ 小时志愿服务，参与蒲公英中学支教及全球南方金融家论坛等项目，在实际一线场景中体会教育与金融议题背后的社会影响。",
+            "section-contact": "联系我",
+            "section-contact-sub": "如对 B2B 产品、咨询项目或研究机会感兴趣，欢迎通过邮箱或微信与我交流。",
+            "footer-name": "李宇轩",
+            "footer-social": "社交：微信 LiYuXuan3208 · 邮箱 liyuxuan_uibe@163.com",
+          },
+          en: {
+            "brand-name": "Yuxuan Li · Leo",
+            "nav-home": "Home",
+            "nav-edu": "Education",
+            "nav-exp": "Experience",
+            "nav-honors": "Leadership",
+            "nav-skills": "Skills",
+            "nav-contact": "Contact",
+            "hero-badge": "Business Analytics · Consulting · Research",
+            "hero-badge-sub": "B.A. in International Economics & French",
+            "hero-name-main": "Yuxuan Li",
+            "hero-name-en": "Leo",
+            "hero-tagline": "B2B Product & Market Insights with Analytical Rigor",
+            "hero-intro":
+              "Undergraduate student at UIBE majoring in International Economics & Trade and French. Interned at Bytedance Lark Meego, Boston Consulting Group (BCG) and Soochow Securities, covering SaaS, QSR franchise and machinery sectors. Passionate about turning ground-level interviews and data into structured insights.",
+            "btn-download": "Download Resume (PDF)",
+            "btn-contact": "Get in touch",
+            "card-contact-title": "Contact",
+            "card-phone": "Phone",
+            "card-email": "Email",
+            "card-city": "City",
+            "card-city-val": "Chaoyang District, Beijing",
+            "card-wechat": "WeChat",
+            "section-edu": "Education",
+            "section-edu-sub": "Combined background in economics and French with international experience.",
+            "edu-uibe-title": "UIBE · B.A. in International Economics & Trade & French",
+            "edu-uibe-time": "Sep 2023 – Jul 2027, Beijing",
+            "edu-gpa": "Major GPA 3.74 / 4.00 · Rank 1 / 13",
+            "edu-lang-cert": "Certificates: IELTS 8.0, French B2 (TEM-4 in French), ACCA passed 7/13 papers.",
+            "edu-awards": "First-Class Scholarship (Top 3%) and Outstanding Student at the University.",
+            "edu-neoma-title": "NEOMA Business School, France · Exchange Semester",
+            "edu-neoma-time": "Sep 2025 – Dec 2025, France",
+            "edu-neoma-note": "Immersive experience in European business education and environment.",
+            "section-honors": "Core Honors",
+            "honor-1": "First-Class Scholarship (Top 3%), recognizing academic performance and campus engagement.",
+            "honor-2": "Outstanding Student at the University, awarded for overall performance and contribution.",
+            "section-exp": "Work & Internship Experience",
+            "section-exp-sub": "Exposure to tech, consulting and equity research with multi-industry coverage.",
+            "exp-lark-title": "Bytedance · Lark Meego — Business Analysis Intern (International)",
+            "exp-lark-time": "Jan 2026 – Apr 2026, Beijing",
+            "exp-lark-tag": "B2B SaaS · Project Management · SEA Market",
+            "exp-lark-1":
+              "Conducted in-depth research on Southeast Asia SaaS market by interviewing 10+ industry experts and synthesizing 120+ user feedback, identifying key barriers such as low payment willingness and product complexity, and prioritizing Retail and Advanced Industry as target sectors.",
+            "exp-lark-2":
+              "Benchmarked Meego against Jira and Base across functionality, market sizing, pricing and user profile, defining Meego's core value in affordable pricing, visualization and native integration with Feishu.",
+            "exp-lark-3":
+              "Deployed customized project management AI Agent via OpenClaw CLI and co-developed Skills such as auto scheduling and project data summarization to reduce manual configuration workload.",
+            "exp-bcg-title": "Boston Consulting Group (BCG) — PTA",
+            "exp-bcg-time": "Aug 2025 – Dec 2025",
+            "exp-bcg-tag": "QSR Franchise · Expansion Strategy · Pricing",
+            "exp-bcg-1":
+              "Benchmarked Master Franchise Agreements of Top 8 global QSR brands, analyzing royalty rates, territorial exclusivity and contract terms to support client's franchise negotiation in China.",
+            "exp-bcg-2":
+              "Analyzed store density and distribution across 30+ cities to identify white-space areas and support phased expansion from core cities to surrounding regions.",
+            "exp-bcg-3":
+              "Modeled pricing for 50+ breakfast and chicken SKUs, visualized price gaps versus competitors, and proposed combo optimization and flavor localization based on Japan and Korea market practices.",
+            "exp-sz-title": "Soochow Securities · Research Assistant, Machinery Team (New Fortune Team)",
+            "exp-sz-time": "Oct 2024 – Mar 2025",
+            "exp-sz-tag": "Machinery · Deep-dive Reports · Overseas Expansion",
+            "exp-sz-1":
+              "Co-authored an in-depth report on a leading machinery company, dissecting traditional casting business, \"Two Engines\" (gas turbine & aero-engine blades) and nuclear materials, and assessing growth driven by low-altitude economy and nuclear power cycle.",
+            "exp-sz-2":
+              "Researched global market space and competition landscape of machinery leaders including XCMG, Sany and Zoomlion, highlighting export-driven growth and overseas capacity.",
+            "exp-sz-3":
+              "Supported daily research with 40+ company/industry calls, 150k+ words of meeting minutes and 80+ WeChat articles for the official account.",
+            "section-lead": "Leadership & Activities",
+            "section-lead-sub": "Developed coordination and public speaking skills through student union and class leadership.",
+            "lead-1-title": "Minister, Culture Department, Foreign Language College Student Union",
+            "lead-1-time": "Sep 2023 – Sep 2025",
+            "lead-1-1":
+              "Planned 10+ campus lectures end-to-end, from guest invitation and proposal drafting to on-site execution, with guests including diplomats, scholars and top creators.",
+            "lead-1-2":
+              "Hosted multiple lectures with 100+ audience, managing on-site interaction and ensuring smooth flow.",
+            "lead-2-title": "Class President, International Economics & French 2301 Class",
+            "lead-2-time": "Sep 2023 – Present",
+            "lead-2-1":
+              "Organized the 70th anniversary celebration of the French major, serving as host and coordinating 100+ alumni from different cohorts.",
+            "lead-2-2":
+              "Managed daily class affairs, monthly meetings and scholarship-related work, maintaining a positive class environment.",
+            "section-skills": "Skills & Volunteering",
+            "section-skills-sub": "Blend of analytical tools, communication skills and long-term volunteering.",
+            "skills-pro": "Core Skills",
+            "skills-data-label": "Data Tools",
+            "skills-data": "Proficient in Wind database for basic financial and industry data extraction; experienced with Stata for regression and panel data analysis.",
+            "skills-office-label": "Presentation",
+            "skills-office": "Skilled in PPT and Excel to structure findings and build models and charts.",
+            "skills-media-label": "Content & Media",
+            "skills-media": "Experienced with CapCut and WeChat official account, contributing to 80+ articles and basic short-video production.",
+            "skills-vol": "Volunteering",
+            "skills-vol-desc":
+              "Accumulated 200+ hours of volunteering, including teaching support at Dandelion School and events like Global South Finance Forum.",
+            "section-contact": "Contact",
+            "section-contact-sub": "For opportunities in B2B product, consulting or research, feel free to reach out via email or WeChat.",
+            "footer-name": "Yuxuan Li",
+            "footer-social": "WeChat LiYuXuan3208 · Email liyuxuan_uibe@163.com",
+          },
+        };
+
+        const THEME_KEY = "yx-portfolio-theme";
+        const LANG_KEY = "yx-portfolio-lang";
+
+        function applyTheme(theme) {
+          if (theme === "dark") {
+            htmlEl.classList.add("dark");
+            themeIcon.textContent = "light_mode";
+          } else {
+            htmlEl.classList.remove("dark");
+            themeIcon.textContent = "dark_mode";
+          }
+          localStorage.setItem(THEME_KEY, theme);
+        }
+
+        function initTheme() {
+          const stored = localStorage.getItem(THEME_KEY);
+          if (stored === "dark" || stored === "light") {
+            applyTheme(stored);
+          } else {
+            applyTheme("light");
+          }
+        }
+
+        function applyLanguage(lang) {
+          const dict = translations[lang] || translations.zh;
+          document.querySelectorAll("[data-i18n]").forEach((el) => {
+            const key = el.getAttribute("data-i18n");
+            if (key && Object.prototype.hasOwnProperty.call(dict, key)) {
+              el.textContent = dict[key];
+            }
+          });
+          langToggleBtns.forEach((btn) => {
+            const target = btn.getAttribute("data-lang-toggle");
+            if (target === lang) {
+              btn.classList.add("bg-slate-900", "text-slate-50");
+              btn.classList.remove("bg-transparent", "text-slate-500");
+            } else {
+              btn.classList.remove("bg-slate-900", "text-slate-50");
+              btn.classList.add("bg-transparent", "text-slate-500");
+            }
+          });
+          localStorage.setItem(LANG_KEY, lang);
+        }
+
+        function initLanguage() {
+          const stored = localStorage.getItem(LANG_KEY);
+          const lang = stored === "en" ? "en" : "zh";
+          applyLanguage(lang);
+        }
+
+        initTheme();
+        initLanguage();
+
+        if (themeToggleBtn) {
+          themeToggleBtn.addEventListener("click", () => {
+            const isDark = htmlEl.classList.contains("dark");
+            applyTheme(isDark ? "light" : "dark");
+          });
+        }
+
+        langToggleBtns.forEach((btn) => {
+          btn.addEventListener("click", () => {
+            const lang = btn.getAttribute("data-lang-toggle");
+            if (lang === "en" || lang === "zh") {
+              applyLanguage(lang);
+            }
+          });
+        });
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.15 }
+        );
+
+        document.querySelectorAll(".fade-in-up").forEach((el) => observer.observe(el));
+      })();
+    </script>
+  </body>
+</html>
